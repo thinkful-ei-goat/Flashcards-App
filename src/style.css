@@ -1,0 +1,48 @@
+.createDeck{
+    background-color: rgb(1, 162, 254);
+    box-shadow: 0 5px 0 rgb(1, 81, 254);
+    color: white;
+    padding: 0.3em 0.1em;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .createDeck:hover{
+      background-color: #001eff;
+      color: white;
+      text-decoration: none;
+  }
+  .card{
+    width:50%
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    overflow:hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .card button{
+      width:100%;
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .card:hover {
+    background: #bbb9b9;
+  }
+
+  td {
+    border: 1px solid;
+  }
+
+  .breadcrumb{
+      font-size: 20px;
+  }
