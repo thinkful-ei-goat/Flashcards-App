@@ -31,6 +31,7 @@ function Deckview({setDecks}){
 
     useEffect(()=>{
         updateCards()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       },[])
 
     const cardDelete = e =>{
