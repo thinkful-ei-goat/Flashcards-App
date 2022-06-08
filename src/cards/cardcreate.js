@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import Navbar from "../overall/navbar";
+
 import { createCard, readCard, readDeck, updateCard } from "../utils/api";
 
 
@@ -22,7 +23,7 @@ function CardCreate({mode,setDecks}) {
     useEffect(()=>{
         
         readDeck(id).then((r)=>deckEdit(r))
-        if(mode==='edit'){
+        if(mode==='editCard'){
             readCard(cardid).then((r)=>formEdit(r))
         }
 
@@ -53,19 +54,21 @@ function CardCreate({mode,setDecks}) {
 
     }
 
+    
+
+
+
+    
+    
+
     const cancel = e => history.push(`/decks/${id}`)
-
-
-
-
-
-
-    if(mode){
+    
     return(
         <>
-        <Navbar mode='editCard' name={deck.name} />
+        
+        <Navbar mode={mode} name={deck.name} />
         <h1>{deck.name}</h1>
-        <form onSubmit={editSubmit}>
+        <form onSubmit={mode==='editCard'?editSubmit:formSubmit}>
             <h5>Name</h5>
             <textarea placeholder={preload.front} id="front" rows="3" type="text" name="front" required={true} onChange={formHandler} value={form.front}/>
             <h5>Description</h5>
@@ -75,22 +78,6 @@ function CardCreate({mode,setDecks}) {
         </form>
         </>
     )
-    }else{
-        return(
-            <>
-        <Navbar mode='addCard' name={deck.name} />
-        <h1>{deck.name}</h1>
-        <form onSubmit={formSubmit}>
-            <h5>Name</h5>
-            <textarea placeholder={preload.front} rows="3" id="front" type="text" name="front" required={true} onChange={formHandler} value={form.front}/>
-            <h5>Description</h5>
-            <textarea placeholder={preload.back} rows="3" id="description" type="text" name="back" required={true} onChange={formHandler} value={form.back}/>
-            <hr/>
-            <button onClick={cancel}>Cancel</button><button type="submit">Save</button>
-        </form>
-        </>
-        )
-    }
 }
 
 

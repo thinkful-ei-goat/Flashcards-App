@@ -4,10 +4,8 @@ import NotFound from "./NotFound";
 import Decklist from "../cards/decklist"
 import { Route, Switch } from "react-router-dom";
 import Deckcreate from "../cards/deckcreate";
-import Navbar from "../overall/navbar"
 import Deckview from "../cards/deckview";
 import Study from "../cards/study";
-import Deck from "../cards/deck";
 import CardCreate from "../cards/cardcreate";
 import { listDecks } from "../utils/api";
 //todo deck edit/view/delete/add
@@ -39,10 +37,10 @@ function Layout() {
             <Deckcreate decks={decks} setDecks={setDecks}/>
           </Route>
           <Route path='/decks/:id/cards/:cardid/edit'>
-            <CardCreate mode='edit' setDecks={setDecks}/>
+            <CardCreate mode='editCard' setDecks={setDecks}/>
           </Route>
           <Route path='/decks/:id/cards/new'>
-            <CardCreate setDecks={setDecks}/>
+            <CardCreate mode='addCard' setDecks={setDecks}/>
           </Route>
           <Route path='/decks/:id/study'>
             <Study/>

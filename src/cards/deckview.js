@@ -35,8 +35,8 @@ function Deckview({setDecks}){
 
     const cardDelete = e =>{
         e.preventDefault()
-        const id = e.target.parentNode.getAttribute('cardid')
-        if(window.confirm('This will be permanent, are you sure?' + `${id}`)){
+        const id = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute('cardid')
+        if(window.confirm('This will be permanent, are you sure?')){
             fetch(`http://localhost:8080/cards/${id}`, { method: 'DELETE' })
             .then(() => updateCards());
         }

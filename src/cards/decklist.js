@@ -1,13 +1,12 @@
 import React from "react"
 import Navbar from "../overall/navbar"
 import {
-    NavLink, useHistory
+    NavLink
   } from "react-router-dom";
 import Deck from "./deck";
 
 function Decklist({decks,setDecks}) {
     let theseDecks = []
-    let history = useHistory()
     //functions: view, delete, study?, create
 
     

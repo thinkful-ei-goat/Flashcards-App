@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink, useLocation, useParams} from "react-router-dom";
-import { readDeck } from "../utils/api";
+import { NavLink, useLocation} from "react-router-dom";
+
 
 function Navbar({name, mode}) {
     
@@ -51,20 +51,3 @@ function Navbar({name, mode}) {
 }
 
 export default Navbar
-
-
-
-
-{/* <Breadcrumbs aria-label="breadcrumb">
-  <Link underline="hover" color="inherit" href="/">
-    MUI
-  </Link>
-  <Link
-    underline="hover"
-    color="inherit"
-    href="/material-ui/getting-started/installation/"
-  >
-    Core
-  </Link>
-  <Typography color="text.primary">Breadcrumbs</Typography>
-</Breadcrumbs> */}

@@ -40,7 +40,7 @@ function Deck({name,description,id,setDecks,mode,count}){
 
     if(!mode){
     return(
-        <div thisdeck={id} key={id}>
+        <div thisdeck={id} key={name}>
         <div className='cardHeader'>
         <h2>{name}</h2>
         <p>{count}</p>
@@ -51,7 +51,7 @@ function Deck({name,description,id,setDecks,mode,count}){
     )}
     else{
         return(
-            <div thisdeck={id} key={id}>
+            <div thisdeck={id} key={name}>
             <h2>{name}</h2>
             <p>{description}</p>
             <button onClick={edit}>Edit</button><button onClick={study}>Study</button><button onClick={addCard}>➕Add Cards</button><button name='delete' onClick={deleteDeck}>🗑️</button>
