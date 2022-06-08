@@ -25,7 +25,7 @@ function Study() {
       })
       
 
-    },[])
+    },[id])
     
     function cardZero() {
       nextcard(0)

@@ -27,7 +27,7 @@ function CardCreate({mode,setDecks}) {
             readCard(cardid).then((r)=>formEdit(r))
         }
 
-    },[])
+    },[id])
     const formSubmit = (e) => {
         e.preventDefault()
         createCard(id,form)

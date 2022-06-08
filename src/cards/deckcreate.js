@@ -25,7 +25,7 @@ function Deckcreate({setDecks,decks,mode}) {
     }
     
        
-      },[])
+      },[id])
     
     function deckrement(decks){
         let count=1
